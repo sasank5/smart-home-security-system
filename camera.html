@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Camera</title>
+    <style>
+        body { background: #020617; color: white; text-align: center; font-family: Arial; }
+        img { border-radius: 15px; margin-top: 20px; box-shadow: 0 0 25px rgba(0,0,0,0.7); }
+        a { display: inline-block; margin-top: 20px; color: #3b82f6; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>🎥 Live Surveillance</h1>
+    <img src="{{ url_for('video') }}" width="720">
+    <br>
+    <a href="/">⬅ Back</a>
+</body>
+</html>

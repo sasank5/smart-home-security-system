@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            background: #020617;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 30px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        th {
+            background: #1e293b;
+        }
+
+        tr:hover {
+            background: #111827;
+        }
+
+        .unknown {
+            color: red;
+        }
+
+        .known {
+            color: #22c55e;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📊 Detection Logs</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Time</th>
+    </tr>
+
+    {% for log in logs %}
+    <tr>
+        <td class="{{ 'unknown' if log[0]=='Unknown' else 'known' }}">
+            {{ log[0] }}
+        </td>
+        <td>{{ log[1] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/">⬅ Back</a>
+
+</body>
+</html>

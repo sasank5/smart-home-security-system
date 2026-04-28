@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Face</title>
+<style>
+body {
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    font-family:'Segoe UI';
+    padding-top:100px;
+}
+
+input, button {
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    margin:10px;
+}
+
+button {
+    background:#22c55e;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📷 Register Face</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Enter Name" required><br>
+    <input type="file" name="photo" required><br>
+    <button type="submit">Register</button>
+</form>
+
+<a href="/">⬅ Back</a>
+
+</body>
+</html>
